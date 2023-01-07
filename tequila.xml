@@ -53,7 +53,7 @@
   <project path="external/ant-wireless/hidl" name="platform_external_ant-wireless_hidl" remote="tequila" />
   <project path="external/dwarves" name="platform/external/dwarves" remote="aosp" revision="3c8f7e8b2cf7ff902b71c42d00fda30f30114b07" />
   <project path="external/e2fsprogs" name="platform_external_e2fsprogs" remote="tequila" />
-  <project path="external/faceunlock" name="external_faceunlock" remote="pe-gitlab-self-hosted" />
+  <project path="external/faceunlock" name="kavencat/external_faceunlock" remote="github" revision="thirteen" />
   <project path="external/gptfdisk" name="platform_external_gptfdisk" remote="tequila" />
   <project path="external/json-c" name="platform_external_json-c" remote="tequila" />
   <project path="external/mksh" name="platform_external_mksh" remote="tequila" />
