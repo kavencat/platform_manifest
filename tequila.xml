@@ -76,6 +76,8 @@
     <!-- for AOSP sdm845, we override os_pickup.mk -->
     <linkfile src="os_pickup.mk" dest="hardware/qcom/sdm845/Android.mk" />
     <!-- add guards for CAF repositories -->
+    <linkfile src="os_pickup.bp" dest="hardware/qcom-caf/msm8998/Android.bp" />
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/msm8998/Android.mk" />
     <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sdm660/Android.bp" />
     <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/sdm660/Android.mk" />
     <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sdm845/Android.bp" />
@@ -87,6 +89,9 @@
     <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sm8350/Android.bp" />
     <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/sm8350/Android.mk" />
   </project>
+  <project path="hardware/qcom-caf/msm8998/audio" name="platform_hardware_qcom-caf_msm8998_audio" groups="qcom,legacy-qcom" remote="tequila" />
+  <project path="hardware/qcom-caf/msm8998/display" name="platform_hardware_qcom-caf_msm8998_display" groups="qcom,legacy-qcom" remote="tequila" />
+  <project path="hardware/qcom-caf/msm8998/media" name="platform_hardware_qcom-caf_msm8998_media" groups="qcom,legacy-qcom" remote="tequila" />
   <!--project path="hardware/qcom-caf/sdm660/audio" name="platform_hardware_qcom-caf_sdm660_audio" groups="qcom,pdk-qcom,qcom_audio" remote="tequila" />
   <project path="hardware/qcom-caf/sdm660/display" name="platform_hardware_qcom-caf_sdm660_display" groups="qcom,pdk-qcom,qcom_display" remote="tequila" />
   <project path="hardware/qcom-caf/sdm660/media" name="platform_hardware_qcom-caf_sdm660_media" groups="qcom,pdk-qcom" remote="tequila" /-->
@@ -169,11 +174,11 @@
   <project path="vendor/qcom/opensource/usb" name="platform_vendor_qcom_opensource_usb" groups="qcom,pdk-qcom" remote="tequila" />
   <project path="vendor/qcom/opensource/vibrator" name="platform_vendor_qcom_opensource_vibrator" groups="qcom,pdk-qcom" remote="tequila" />
   <project path="vendor/qcom/opensource/wfd-commonsys" name="platform_vendor_qcom_opensource_wfd-commonsys" groups="qcom,pdk" remote="tequila" />
-  
+
   <project path="device/xiaomi/wayne" name="kavencat/android_device_xiaomi_wayne-4.19" remote="github" revision="test" />
   <project path="kernel/xiaomi/wayne" name="kavencat/android_kernel_xiaomi_wayne-4.19" remote="github" revision="TDA" />
   <project path="vendor/xiaomi/wayne" name="kavencat/android_vendor_xiaomi_wayne-4.19" remote="github" revision="lineage-20.0" />
-	
+
   <project path="hardware/qcom-caf/sdm660/audio" name="Miku-UI/platform_hardware_qcom-caf_sdm660_audio" groups="qcom,qcom_audio,pdk-qcom" remote="github" revision="TDA" />
   <project path="hardware/qcom-caf/sdm660/display" name="Miku-UI/platform_hardware_qcom-caf_sdm660_display" groups="pdk-qcom,qcom,qcom_display" remote="github" revision="TDA" />
   <project path="hardware/qcom-caf/sdm660/media" name="Miku-UI/platform_hardware_qcom-caf_sdm660_media" groups="qcom,pdk-qcom" remote="github" revision="TDA" />
