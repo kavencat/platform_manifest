@@ -179,9 +179,10 @@
   <project path="kernel/xiaomi/wayne" name="kavencat/android_kernel_xiaomi_wayne-4.19" remote="github" revision="TDA" />
   <project path="vendor/xiaomi/wayne" name="kavencat/android_vendor_xiaomi_wayne-4.19" remote="github" revision="lineage-20.0" />
 
-  <project path="hardware/qcom-caf/sdm660/audio" name="Miku-UI/platform_hardware_qcom-caf_sdm660_audio" groups="qcom,qcom_audio,pdk-qcom" remote="github" revision="TDA" />
-  <project path="hardware/qcom-caf/sdm660/display" name="Miku-UI/platform_hardware_qcom-caf_sdm660_display" groups="pdk-qcom,qcom,qcom_display" remote="github" revision="TDA" />
-  <project path="hardware/qcom-caf/sdm660/media" name="Miku-UI/platform_hardware_qcom-caf_sdm660_media" groups="qcom,pdk-qcom" remote="github" revision="TDA" />
-  <project path="vendor/qcom/opensource/data-ipa-cfg-mgr" name="Miku-UI/platform_vendor_qcom_opensource_data-ipa-cfg-mgr" remote="github" revision="snowland" />
+  <project path="hardware/qcom-caf/sdm660/audio" name="kavencat/platform_hardware_qcom-caf_sdm660_audio" groups="qcom,qcom_audio,pdk-qcom" remote="github" revision="TDA" />
+  <project path="hardware/qcom-caf/sdm660/display" name="kavencat/platform_hardware_qcom-caf_sdm660_display" groups="pdk-qcom,qcom,qcom_display" remote="github" revision="TDA" />
+  <project path="hardware/qcom-caf/sdm660/media" name="kavencat/platform_hardware_qcom-caf_sdm660_media" groups="qcom,pdk-qcom" remote="github" revision="TDA" />
+  <project path="vendor/qcom/opensource/data-ipa-cfg-mgr" name="kavencat/platform_vendor_qcom_opensource_data-ipa-cfg-mgr" remote="github" revision="TDA" />
+  <project path="vendor/qcom/opensource/data-ipa-cfg-mgr-legacy-um" name="kavencat/platform_vendor_qcom_opensource_data-ipa-cfg-mgr-legacy-um" remote="github" revision="TDA" />
 
 </manifest>
