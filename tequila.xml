@@ -165,5 +165,6 @@
 
   <!-- Customization app -->
   <project path="packages/apps/Updater" name="kavencat/platform_packages_apps_Updater" remote="github"  revision="taco"/>
+  <project path="packages/apps/android_packages_apps_Recorder-arrow" name="kavencat/android_packages_apps_Recorder-arrow" remote="github"  revision="13"/>
 
 </manifest>
