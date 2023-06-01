@@ -36,7 +36,7 @@
     <linkfile src="target" dest="build/target" />
     <linkfile src="tools" dest="build/tools" />
   </project>
-  <project path="build/soong" name="platform_build_soong" groups="pdk,tradefed" remote="tequila" >
+  <project path="build/soong" name="kavencat/platform_build_soong" groups="pdk,tradefed" remote="github" revision="tortilla" >
     <linkfile src="root.bp" dest="Android.bp" />
     <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
   </project>
@@ -55,7 +55,7 @@
   <project path="external/ant-wireless/hidl" name="platform_external_ant-wireless_hidl" remote="tequila" />
   <project path="external/dwarves" name="platform/external/dwarves" remote="aosp" revision="3c8f7e8b2cf7ff902b71c42d00fda30f30114b07" />
   <project path="external/e2fsprogs" name="platform_external_e2fsprogs" remote="tequila" />
-  <project path="external/faceunlock" name="external_faceunlock" remote="pe-gitlab-self-hosted" />
+  <project path="external/faceunlock" name="kavencat/external_faceunlock" remote="github" revision="thirteen" />
   <project path="external/gptfdisk" name="platform_external_gptfdisk" remote="tequila" />
   <project path="external/json-c" name="platform_external_json-c" remote="tequila" />
   <project path="external/mksh" name="platform_external_mksh" remote="tequila" />
@@ -102,9 +102,9 @@
   <project path="hardware/qcom-caf/msm8998/audio" name="platform_hardware_qcom-caf_msm8998_audio" groups="qcom,legacy-qcom" remote="tequila" />
   <project path="hardware/qcom-caf/msm8998/display" name="platform_hardware_qcom-caf_msm8998_display" groups="qcom,legacy-qcom" remote="tequila" />
   <project path="hardware/qcom-caf/msm8998/media" name="platform_hardware_qcom-caf_msm8998_media" groups="qcom,legacy-qcom" remote="tequila" />
-  <project path="hardware/qcom-caf/sdm660/audio" name="platform_hardware_qcom-caf_sdm660_audio" groups="qcom,pdk-qcom,qcom_audio" remote="tequila" />
+  <!--project path="hardware/qcom-caf/sdm660/audio" name="platform_hardware_qcom-caf_sdm660_audio" groups="qcom,pdk-qcom,qcom_audio" remote="tequila" />
   <project path="hardware/qcom-caf/sdm660/display" name="platform_hardware_qcom-caf_sdm660_display" groups="qcom,pdk-qcom,qcom_display" remote="tequila" />
-  <project path="hardware/qcom-caf/sdm660/media" name="platform_hardware_qcom-caf_sdm660_media" groups="qcom,pdk-qcom" remote="tequila" />
+  <project path="hardware/qcom-caf/sdm660/media" name="platform_hardware_qcom-caf_sdm660_media" groups="qcom,pdk-qcom" remote="tequila" /-->
   <project path="hardware/qcom-caf/sdm845/audio" name="platform_hardware_qcom-caf_sdm845_audio" groups="qcom,pdk-qcom,qcom_audio" remote="tequila" />
   <project path="hardware/qcom-caf/sdm845/display" name="platform_hardware_qcom-caf_sdm845_display" groups="qcom,pdk-qcom,qcom_display" remote="tequila" />
   <project path="hardware/qcom-caf/sdm845/media" name="platform_hardware_qcom-caf_sdm845_media" groups="qcom,pdk-qcom" remote="tequila" />
@@ -135,6 +135,8 @@
 
   <!-- packages -->
   <project path="packages/apps/Aperture" name="platform_packages_apps_Aperture" remote="tequila" />
+  <project path="packages/apps/DocumentsUI" name="platform_packages_apps_DocumentsUI" remote="tequila" />
+  <project path="packages/apps/Recorder" name="LineageOS/android_packages_apps_Recorder" remote="github" revision="lineage-20.0" />
   <project path="packages/apps/FaceUnlockService" name="PixelExperience/packages_apps_FaceUnlockService" remote="github" revision="thirteen" />
   <project path="packages/apps/RepainterServicePriv" name="kdrag0n/android_packages_apps_RepainterServicePriv" remote="github" revision="main" />
   <project path="packages/apps/Launcher3" name="platform_packages_apps_Launcher3" remote="tequila" />
@@ -177,8 +179,9 @@
   <!-- vendor -->
   <project path="vendor/codeaurora/telephony" name="platform_vendor_codeaurora_telephony" remote="tequila" />
   <project path="vendor/google/gms" name="platform_vendor_google_gms" remote="tequila-gitlab" />
-  <project path="vendor/google/pixel" name="platform_vendor_google_pixel" remote="tequila-gitlab" />
-  <project path="vendor/tequila" name="platform_vendor_tequila" remote="tequila" />
+  <project path="vendor/google/pixel" name="kavencat/platform_vendor_google_pixel" remote="github" revision="tortilla" />
+  <project path="vendor/qrcode/zxing" name="platform_vendor_qrcode_zxing" remote="tequila" revision="tobacco" />
+  <project path="vendor/tequila" name="kavencat/platform_vendor_tequila" remote="github" revision="tortilla" />
   <project path="vendor/support" name="platform_vendor_support" remote="tequila" />
 
   <!-- vendor/nxp -->
@@ -210,5 +213,15 @@
   <project path="vendor/qcom/opensource/usb" name="platform_vendor_qcom_opensource_usb" groups="qcom,pdk-qcom" remote="tequila" />
   <project path="vendor/qcom/opensource/vibrator" name="platform_vendor_qcom_opensource_vibrator" groups="qcom,pdk-qcom" remote="tequila" />
   <project path="vendor/qcom/opensource/wfd-commonsys" name="platform_vendor_qcom_opensource_wfd-commonsys" groups="qcom,pdk" remote="tequila" />
+
+  <project path="device/xiaomi/wayne" name="kavencat/android_device_xiaomi_wayne-4.19" remote="github" revision="test" />
+  <project path="kernel/xiaomi/wayne" name="kavencat/android_kernel_xiaomi_wayne-4.19" remote="github" revision="tequila" />
+  <project path="vendor/xiaomi/wayne" name="kavencat/android_vendor_xiaomi_wayne-4.19" remote="github" revision="tequila" />
+
+  <project path="hardware/qcom-caf/sdm660/audio" name="kavencat/platform_hardware_qcom-caf_sdm660_audio" groups="qcom,qcom_audio,pdk-qcom" remote="github" revision="TDA" />
+  <project path="hardware/qcom-caf/sdm660/display" name="kavencat/platform_hardware_qcom-caf_sdm660_display" groups="pdk-qcom,qcom,qcom_display" remote="github" revision="TDA" />
+  <project path="hardware/qcom-caf/sdm660/media" name="kavencat/platform_hardware_qcom-caf_sdm660_media" groups="qcom,pdk-qcom" remote="github" revision="TDA" />
+  <!--project path="vendor/qcom/opensource/data-ipa-cfg-mgr" name="kavencat/platform_vendor_qcom_opensource_data-ipa-cfg-mgr" remote="github" revision="TDA" />
+  <project path="vendor/qcom/opensource/data-ipa-cfg-mgr-legacy-um" name="kavencat/platform_vendor_qcom_opensource_data-ipa-cfg-mgr-legacy-um" remote="github" revision="TDA" /-->
 
 </manifest>
