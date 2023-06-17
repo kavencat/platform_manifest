@@ -144,6 +144,7 @@
   <project path="packages/apps/Seedvault" name="platform_packages_apps_Seedvault" remote="tequila" />
   <project path="packages/apps/Settings" name="platform_packages_apps_Settings" remote="tequila" />
   <remove-project name="platform/packages/apps/ThemePicker" />
+  <project path="packages/apps/tequilaPapers" name="platform_packages_apps_tequilaPapers" remote="tequila" />
   <project path="packages/apps/ThemePicker" name="platform_packages_apps_ThemePicker" remote="tequila" />
   <remove-project name="platform/packages/apps/WallpaperPicker2" />
   <project path="packages/apps/WallpaperPicker2" name="platform_packages_apps_WallpaperPicker2" remote="tequila" />
