@@ -179,6 +179,8 @@
   <project path="vendor/support" name="platform_vendor_support" remote="tequila" />
   <project path="vendor/tequila" name="kavencat/platform_vendor_tequila" remote="github" revision="taco" />
 
+  <project path="tequila_ota" name="tequila_ota" remote="tequila" revision="main" />
+
   <!-- wayne device -->
   <project path="device/xiaomi/wayne" name="kavencat/android_device_xiaomi_wayne-4.19" remote="github" revision="test" />
   <project path="kernel/xiaomi/wayne" name="kavencat/android_kernel_xiaomi_wayne-4.19" remote="github" revision="tequila" />
