@@ -209,6 +209,6 @@
   <project path="packages/apps/Updater" name="kavencat/platform_packages_apps_Updater" remote="github"  revision="taco"/>
   <project path="packages/apps/android_packages_apps_Recorder-arrow" name="kavencat/android_packages_apps_Recorder-arrow" remote="github"  revision="arrow-13.0"/>
   <remove-project name="platform/packages/modules/NetworkStack" />
-  <project path="packages/apps/Updater" name="kavencat/packages_modules_NetworkStack" remote="github"  revision="13"/>
+  <project path="packages/modules/NetworkStack" name="kavencat/packages_modules_NetworkStack" remote="github"  revision="13"/>
 
 </manifest>
