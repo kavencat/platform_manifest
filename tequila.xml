@@ -15,7 +15,7 @@
 
   <!-- packages -->
   <project path="packages/apps/Aperture" name="platform_packages_apps_Aperture" remote="tequila" />
-  <project path="packages/apps/Updater" name="platform_packages_apps_Updater" remote="tequila" />
+  <!--project path="packages/apps/Updater" name="platform_packages_apps_Updater" remote="tequila" /-->
   <project path="packages/resources/devicesettings" name="platform_packages_resources_devicesettings" remote="tequila" />
 
   <!-- vendor -->
@@ -24,5 +24,20 @@
   <project path="vendor/tequila" name="platform_vendor_tequila" remote="tequila" />
 
   <project path="tequila_ota" name="tequila_ota" remote="tequila" revision="main" />
+  
+  <!-- wayne device -->
+  <project path="device/xiaomi/wayne" name="kavencat/android_device_xiaomi_wayne-4.19" remote="github" revision="test" />
+  <project path="kernel/xiaomi/wayne" name="kavencat/android_kernel_xiaomi_wayne-4.19" remote="github" revision="tequila" />
+  <project path="vendor/xiaomi/wayne" name="kavencat/android_vendor_xiaomi_wayne-4.19" remote="github" revision="tequila" />
+
+  <project path="hardware/qcom-caf/sdm660/audio" name="kavencat/platform_hardware_qcom-caf_sdm660_audio" groups="qcom,qcom_audio,pdk-qcom" remote="github" revision="TDA" />
+  <project path="hardware/qcom-caf/sdm660/display" name="kavencat/platform_hardware_qcom-caf_sdm660_display" groups="pdk-qcom,qcom,qcom_display" remote="github" revision="TDA" />
+  <project path="hardware/qcom-caf/sdm660/media" name="kavencat/platform_hardware_qcom-caf_sdm660_media" groups="qcom,pdk-qcom" remote="github" revision="TDA" />
+
+  <!-- Customization app -->
+  <project path="packages/apps/Updater" name="kavencat/platform_packages_apps_Updater" remote="github"  revision="uno"/>
+  <project path="packages/apps/Recorder" name="kavencat/android_packages_apps_Recorder-arrow" remote="github"  revision="arrow-13.0"/>
+  <!--remove-project name="platform/packages/modules/NetworkStack" />
+  <project path="packages/modules/NetworkStack" name="kavencat/packages_modules_NetworkStack" remote="github"  revision="13"/-->
 
 </manifest>
