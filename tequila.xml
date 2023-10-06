@@ -1,214 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
-  <remote  name="tequila"
-           fetch="https://github.com/tequilaOS"
-           revision="refs/heads/taco"
-           review="https://review.tequilaos.org" />
-
-  <remote  name="tequila-gitlab"
-           fetch="https://gitlab.com/tequilaOS/android"
-           revision="refs/heads/taco"
-           review="https://review.tequilaos.org" />
-
-  <remote  name="github"
-           fetch="https://github.com" />
-
   <!-- rootdir -->
-  <remove-project name="platform/bionic" />
-  <project path="bionic" name="platform_bionic" remote="tequila" />
-  <project path="manifest" name="kavencat/platform_manifest" remote="github" revision="taco" />
-
-  <!-- bootable -->
-  <remove-project name="platform/bootable/recovery" />
-  <project path="bootable/recovery" name="platform_bootable_recovery" remote="tequila" />
-
-  <!-- build -->
-  <remove-project name="platform/build" />
-  <project path="build/make" name="platform_build" groups="pdk" remote="tequila" >
-    <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
-    <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
-    <linkfile src="core" dest="build/core" />
-    <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
-    <linkfile src="target" dest="build/target" />
-    <linkfile src="tools" dest="build/tools" />
-  </project>
-  <remove-project name="platform/build/soong" />
-  <project path="build/soong" name="kavencat/platform_build_soong" groups="pdk,tradefed" remote="github" revision="taco" >
-    <linkfile src="root.bp" dest="Android.bp" />
-    <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
-  </project>
+  <project path="manifest" name="platform_manifest" remote="tequila" />
 
   <!-- device -->
-  <remove-project name="device/amlogic/yukawa" />
-  <remove-project name="device/amlogic/yukawa-kernel" />
-  <remove-project name="device/common" />
-  <remove-project name="device/generic/arm64" />
-  <remove-project name="device/generic/armv7-a-neon" />
-  <remove-project name="device/generic/car" />
-  <remove-project name="device/generic/mini-emulator-arm64" />
-  <remove-project name="device/generic/mini-emulator-armv7-a-neon" />
-  <remove-project name="device/generic/mini-emulator-x86" />
-  <remove-project name="device/generic/mini-emulator-x86_64" />
-  <remove-project name="device/generic/opengl-transport" />
-  <remove-project name="device/generic/qemu" />
-  <remove-project name="device/generic/trusty" />
-  <remove-project name="device/generic/uml" />
-  <remove-project name="device/generic/x86" />
-  <remove-project name="device/generic/x86_64" />
-  <remove-project name="device/google_car" />
-  <remove-project name="device/google/atv" />
-  <remove-project name="device/google/barbet" />
-  <remove-project name="device/google/barbet-sepolicy" />
-  <remove-project name="device/google/bluejay" />
-  <remove-project name="device/google/bluejay-kernel" />
-  <remove-project name="device/google/bluejay-sepolicy" />
-  <remove-project name="device/google/bramble" />
-  <remove-project name="device/google/bramble-sepolicy" />
-  <remove-project name="device/google/coral" />
-  <remove-project name="device/google/coral-kernel" />
-  <remove-project name="device/google/coral-sepolicy" />
-  <remove-project name="device/google/felix" />
-  <remove-project name="device/google/felix-kernel" />
-  <remove-project name="device/google/felix-sepolicy" />
-  <remove-project name="device/google/lynx" />
-  <remove-project name="device/google/lynx-kernel" />
-  <remove-project name="device/google/lynx-sepolicy" />
-  <remove-project name="device/google/redbull" />
-  <remove-project name="device/google/redbull-sepolicy" />
-  <remove-project name="device/google/redbull-kernel" />
-  <remove-project name="device/google/redfin" />
-  <remove-project name="device/google/redfin-sepolicy" />
-  <remove-project name="device/google/sunfish" />
-  <remove-project name="device/google/sunfish-kernel" />
-  <remove-project name="device/google/sunfish-sepolicy" />
-  <remove-project name="device/google/tangorpro" />
-  <remove-project name="device/google/tangorpro-kernel" />
-  <remove-project name="device/google/tangorpro-sepolicy" />
-  <remove-project name="device/google/gs101" />
-  <remove-project name="device/google/gs101-sepolicy" />
-  <remove-project name="device/google/gs201" />
-  <remove-project name="device/google/gs201-sepolicy" />
-  <remove-project name="device/google/gs-common" />
-  <remove-project name="device/google/pantah" />
-  <remove-project name="device/google/pantah-kernel" />
-  <remove-project name="device/google/pantah-sepolicy" />
-  <remove-project name="device/google/raviole" />
-  <remove-project name="device/google/raviole-kernel" />
-  <remove-project name="device/google/trout" />
-  <remove-project name="device/google/vrservices" />
-  <remove-project name="device/linaro/dragonboard" />
-  <remove-project name="device/linaro/dragonboard-kernel" />
-  <remove-project name="device/linaro/hikey" />
-  <remove-project name="device/linaro/hikey-kernel" />
-  <remove-project name="device/linaro/poplar" />
-  <remove-project name="device/linaro/poplar-kernel" />
-  <remove-project name="device/mediatek/wembley-sepolicy" />
-  <remove-project name="device/sample" />
-  <remove-project name="device/ti/beagle-x15" />
-  <remove-project name="device/ti/beagle-x15-kernel" />
   <project path="device/qcom/sepolicy" name="platform_device_qcom_sepolicy" remote="tequila" />
   <project path="device/qcom/sepolicy_vndr" name="platform_device_qcom_sepolicy_vndr" remote="tequila" />
   <project path="device/qcom/sepolicy_vndr-legacy-um" name="platform_device_qcom_sepolicy_vndr-legacy-um" remote="tequila" />
   <project path="device/qcom/sepolicy-legacy-um" name="platform_device_qcom_sepolicy-legacy-um" remote="tequila" />
   <project path="device/tequila/sepolicy" name="platform_device_tequila_sepolicy" remote="tequila" />
 
-  <!-- external -->
-  <remove-project name="platform/external/gptfdisk" />
-  <project path="external/gptfdisk" name="platform_external_gptfdisk" remote="tequila" />
-  <remove-project name="platform/external/mksh" />
-  <project path="external/mksh" name="platform_external_mksh" remote="tequila" />
-  <remove-project name="platform/external/tinycompress" />
-  <project path="external/tinycompress" name="platform_external_tinycompress" remote="tequila" />
-
-  <!-- frameworks -->
-  <remove-project name="platform/frameworks/av" />
-  <project path="frameworks/av" name="platform_frameworks_av" remote="tequila" />
-  <remove-project name="platform/frameworks/base" />
-  <project path="frameworks/base" name="platform_frameworks_base" remote="tequila" />
-  <remove-project name="platform/frameworks/native" />
-  <project path="frameworks/native" name="platform_frameworks_native" remote="tequila" />
-  <remove-project name="platform/frameworks/opt/telephony" />
-  <project path="frameworks/opt/telephony" name="platform_frameworks_opt_telephony" remote="tequila" />
-
-  <!-- hardware -->
-  <remove-project name="platform/hardware/interfaces" />
-  <project path="hardware/interfaces" name="platform_hardware_interfaces" remote="tequila" />
-  <remove-project name="platform/hardware/libhardware" />
-  <project path="hardware/libhardware" name="platform_hardware_libhardware" remote="tequila" />
-  <remove-project name="platform/hardware/libhardware_legacy" />
-  <project path="hardware/libhardware_legacy" name="platform_hardware_libhardware_legacy" remote="tequila" />
   <project path="hardware/tequila/interfaces" name="platform_hardware_tequila_interfaces" remote="tequila" />
 
   <!-- packages -->
   <project path="packages/apps/Aperture" name="platform_packages_apps_Aperture" remote="tequila" />
-  <remove-project name="platform/packages/apps/Dialer" />
-  <project path="packages/apps/Dialer" name="platform_packages_apps_Dialer" remote="tequila" />
-  <project path="packages/apps/ExactCalculator" name="platform_packages_apps_ExactCalculator" remote="tequila" />
-  <project path="packages/apps/Jelly" name="platform_packages_apps_Jelly" remote="tequila" />
-  <remove-project name="platform/packages/apps/Launcher3" />
-  <project path="packages/apps/Launcher3" name="platform_packages_apps_Launcher3" remote="tequila" />
-  <remove-project name="platform/packages/apps/Messaging" />
-  <project path="packages/apps/ParanoidSense" name="platform_packages_apps_ParanoidSense" remote="tequila-gitlab" />
-  <project path="packages/apps/Messaging" name="platform_packages_apps_Messaging" remote="tequila" />
-  <remove-project name="platform/packages/apps/Settings" />
-  <project path="packages/apps/Seedvault" name="platform_packages_apps_Seedvault" remote="tequila" />
-  <project path="packages/apps/Settings" name="platform_packages_apps_Settings" remote="tequila" />
-  <remove-project name="platform/packages/apps/ThemePicker" />
-  <project path="packages/apps/tequilaPapers" name="platform_packages_apps_tequilaPapers" remote="tequila" />
-  <project path="packages/apps/ThemePicker" name="platform_packages_apps_ThemePicker" remote="tequila" />
-  <remove-project name="platform/packages/apps/WallpaperPicker2" />
-  <project path="packages/apps/WallpaperPicker2" name="platform_packages_apps_WallpaperPicker2" remote="tequila" />
-  <remove-project name="platform/packages/inputmethods/LatinIME" />
-  <project path="packages/inputmethods/LatinIME" name="platform_packages_inputmethods_LatinIME" remote="tequila" />
-  <remove-project name="platform/packages/modules/adb" />
-  <project path="packages/modules/adb" name="platform_packages_modules_adb" remote="tequila" />
-  <remove-project name="platform/packages/modules/common" />
-  <project path="packages/modules/common" name="platform_packages_modules_common" remote="tequila" />
-  <remove-project name="platform/packages/modules/Bluetooth" />
-  <project path="packages/modules/Bluetooth" name="platform_packages_modules_Bluetooth" remote="tequila" />
-  <remove-project name="platform/packages/modules/Connectivity" />
-  <project path="packages/modules/Connectivity" name="platform_packages_modules_Connectivity" remote="tequila" />
-  <remove-project name="platform/packages/modules/Permission" />
-  <project path="packages/modules/Permission" name="platform_packages_modules_Permission" remote="tequila" />
+  <project path="packages/apps/Updater" name="platform_packages_apps_Updater" remote="tequila" />
   <project path="packages/resources/devicesettings" name="platform_packages_resources_devicesettings" remote="tequila" />
-
-  <!-- system -->
-  <remove-project name="platform/system/core" />
-  <project path="system/core" name="platform_system_core" remote="tequila" />
-  <remove-project name="platform/system/logging" />
-  <project path="system/logging" name="platform_system_logging" remote="tequila" />
-  <remove-project name="platform/system/netd" />
-  <project path="system/netd" name="platform_system_netd" remote="tequila" />
-  <remove-project name="platform/system/security" />
-  <project path="system/security" name="platform_system_security" remote="tequila" />
-  <remove-project name="platform/system/sepolicy" />
-  <project path="system/sepolicy" name="platform_system_sepolicy" remote="tequila" />
-  <remove-project name="platform/system/update_engine" />
-  <project path="system/update_engine" name="platform_system_update_engine" remote="tequila" />
-  <remove-project name="platform/system/vold" />
-  <project path="system/vold" name="platform_system_vold" remote="tequila" />
 
   <!-- vendor -->
   <project path="vendor/gapps" name="platform_vendor_gapps" remote="tequila-gitlab" />
   <project path="vendor/support" name="platform_vendor_support" remote="tequila" />
-  <project path="vendor/tequila" name="kavencat/platform_vendor_tequila" remote="github" revision="taco" />
+  <project path="vendor/tequila" name="platform_vendor_tequila" remote="tequila" />
 
   <project path="tequila_ota" name="tequila_ota" remote="tequila" revision="main" />
-
-  <!-- wayne device -->
-  <project path="device/xiaomi/wayne" name="kavencat/android_device_xiaomi_wayne-4.19" remote="github" revision="test" />
-  <project path="kernel/xiaomi/wayne" name="kavencat/android_kernel_xiaomi_wayne-4.19" remote="github" revision="tequila" />
-  <project path="vendor/xiaomi/wayne" name="kavencat/android_vendor_xiaomi_wayne-4.19" remote="github" revision="tequila" />
-
-  <project path="hardware/qcom-caf/sdm660/audio" name="kavencat/platform_hardware_qcom-caf_sdm660_audio" groups="qcom,qcom_audio,pdk-qcom" remote="github" revision="TDA" />
-  <project path="hardware/qcom-caf/sdm660/display" name="kavencat/platform_hardware_qcom-caf_sdm660_display" groups="pdk-qcom,qcom,qcom_display" remote="github" revision="TDA" />
-  <project path="hardware/qcom-caf/sdm660/media" name="kavencat/platform_hardware_qcom-caf_sdm660_media" groups="qcom,pdk-qcom" remote="github" revision="TDA" />
-
-  <!-- Customization app -->
-  <project path="packages/apps/Updater" name="kavencat/platform_packages_apps_Updater" remote="github"  revision="taco"/>
-  <project path="packages/apps/android_packages_apps_Recorder-arrow" name="kavencat/android_packages_apps_Recorder-arrow" remote="github"  revision="arrow-13.0"/>
-  <remove-project name="platform/packages/modules/NetworkStack" />
-  <project path="packages/modules/NetworkStack" name="kavencat/packages_modules_NetworkStack" remote="github"  revision="13"/>
 
 </manifest>
