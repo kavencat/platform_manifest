@@ -30,6 +30,10 @@
 
   <project path="tequila_ota" name="tequila_ota" remote="tequila" revision="main" />
   
+  <!-- vendor/qcom -->
+  <project path="vendor/qcom/opensource/data-ipa-cfg-mgr" name="platform_vendor_qcom_opensource_data-ipa-cfg-mgr" groups="qcom,waipio-vendor" remote="tequila" />
+  <project path="vendor/qcom/opensource/data-ipa-cfg-mgr-legacy-um" name="platform_vendor_qcom_opensource_data-ipa-cfg-mgr-legacy-um" groups="qcom,waipio-vendor" remote="tequila" />
+  
   <!-- wayne device -->
   <project path="device/xiaomi/wayne" name="kavencat/android_device_xiaomi_wayne-4.19" remote="github" revision="test" />
   <project path="kernel/xiaomi/wayne" name="kavencat/android_kernel_xiaomi_wayne-4.19" remote="github" revision="tequila" />
