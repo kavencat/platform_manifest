@@ -55,5 +55,8 @@
   <project path="packages/apps/Recorder" name="kavencat/android_packages_apps_Recorder-arrow" remote="github"  revision="arrow-13.0"/>
   <!--remove-project name="platform/packages/modules/NetworkStack" />
   <project path="packages/modules/NetworkStack" name="kavencat/packages_modules_NetworkStack" remote="github"  revision="13"/-->
+  
+  <!-- KernelSU -->
+  <project path="kernel/KernelSU" name="tiann/KernelSU" remote="github" revision="main" />
 
 </manifest>
