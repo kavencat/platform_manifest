@@ -17,7 +17,7 @@
   <project path="external/tinyxml" name="platform/external/tinyxml" groups="pdk" remote="aosp" revision="refs/tags/android-11.0.0_r46" />
   
   <!-- hardware -->
-  <project path="hardware/qcom-caf/common" name="android_hardware_qcom-caf_common" groups="qcom" remote="tequila" >
+  <project path="hardware/qcom-caf/common" name="platform_hardware_qcom-caf_common" groups="qcom" remote="tequila" >
     <!-- add guard for AOSP hardware/qcom dir -->
     <linkfile src="os_pickup_aosp.mk" dest="hardware/qcom/Android.mk" />
     <!-- add guards for CAF repositories -->
