@@ -1279,5 +1279,8 @@
 
   <!-- Extra remotes -->
   <include name="snippets/remotes.xml" />
+  
+  <!-- Wayne devices -->
+  <include name="snippets/wayne.xml" />
 
 </manifest>
