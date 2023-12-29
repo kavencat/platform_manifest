@@ -204,6 +204,8 @@
   <project path="hardware/qcom-caf/sdm660/audio" name="kavencat/platform_hardware_qcom-caf_sdm660_audio" groups="qcom,qcom_audio,pdk-qcom" remote="github" revision="TDA" />
   <project path="hardware/qcom-caf/sdm660/display" name="kavencat/platform_hardware_qcom-caf_sdm660_display" groups="pdk-qcom,qcom,qcom_display" remote="github" revision="TDA" />
   <project path="hardware/qcom-caf/sdm660/media" name="kavencat/platform_hardware_qcom-caf_sdm660_media" groups="qcom,pdk-qcom" remote="github" revision="TDA" />
+  
+  <project path="hardware/xiaomi" name="platform_hardware_xiaomi" remote="tequila" />
 
   <!-- Customization app -->
   <project path="packages/apps/Updater" name="kavencat/platform_packages_apps_Updater" remote="github"  revision="taco"/>
