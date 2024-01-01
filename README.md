@@ -1,83 +1,61 @@
-# PixelBuilds #
+<p align="center">
+<img src="https://github.com/SuperiorOS/manifest/assets/29405483/4186221f-e198-43bf-a2d4-d1046a0db269" />
+</p>
 
-## Setting up your building enviroment ##
+---
 
-To establish your building environment, ensure that you are operating a 64-bit Linux distribution and have installed necessary packages for building Android. Preferably, use Ubuntu as recommended by Google. Follow the system setup instructions, including Ubuntu-specific commands, available on the [Android Open Source Project website](https://source.android.com/source/initializing.html#setting-up-a-linux-build-environment).
+# Credits:
 
-After configuring your machine, return here to proceed with the subsequent instructions.
+- [**AOSP**](https://android.googlesource.com)
+- [**LineageOS**](https://github.com/LineageOS)
+- [**PixelExperience**](https://github.com/PixelExperience)
+- [**ProtonAOSP**](https://github.com/ProtonAOSP)
+- [**ArrowOS**](https://github.com/ArrowOS)
+- [**Pixys OS**](https://github.com/PixysOS)
+- [**Crdroid Android**](https://github.com/crdroidandroid)
 
-### Installing Repo ###
+To get started with the building process, you'll need to get familiar with [Git and Repo](http://source.android.com/source/using-repo.html).
 
-[Repo](http://source.android.com/source/developing.html) is a tool provided by Google that
-simplifies using [Git](http://git-scm.com/book) in the context of the Android source.
+# Requirements:
 
-```bash
-# Make a directory where Repo will be stored and add it to the path
-$ mkdir ~/.bin
-$ PATH=~/.bin:$PATH
+- Around 400G disk space.
+- A computer with at least 16GB RAM running Linux (recommended) or MacOS.
+- Build environment [setup](https://github.com/akhilnarang/scripts).
 
-# Download Repo itself
-$ curl https://storage.googleapis.com/git-repo-downloads/repo > ~/.bin/repo
-
-# Make Repo executable
-$ chmod a+x ~/.bin/repo
-```
-
-### Initializing Repo ###
-
-```bash
-# Establish a directory for the source files
-# Choose any name for this directory, but ensure to substitute
-# WORKSPACE with your chosen name throughout this guide.
-# The directory can be placed in any location, as long as the file system is case-sensitive.
-$ mkdir WORKSPACE
-$ cd WORKSPACE
-
-# Init Repo in the created directory
-# Use a real name/email combination, if you intend to submit patches
-$ repo init -u https://github.com/kavencat/platform_manifest -b unity
-```
-
-Or alternatively if you do not intend to submit patches and/or have limited network/disk space resources:
+# Sync Source:-
 
 ```bash
-$ repo init -u https://github.com/kavencat/platform_manifest -b unity --depth=1
+    repo init -u https://github.com/kavencat/platform_manifest.git -b unity
 ```
-
-
-### Syncing the source tree ###
-
-This is what you will run each time you want to pull in upstream changes. Keep in mind that on your
-first run, it is expected to take a while as it will download all the required Android source files
-and their change histories.
 
 ```bash
-# Let the Repo sync begin
-#
-# The -j# option specifies the number of concurrent download threads to run.
-# If your don't have connection that is fast enough or you are facing some sync
-# errors, you may need to adjust this value (e.g -j 2)
-$ repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
+    repo sync --force-sync
 ```
 
-## Building ##
-
-The bundled builder tool `./pb-build.sh` handles all the building steps for the specified device
-automatically. As the device value, you specify the devices codename (for example,'bonito' 
-for the Pixel 3a XL).
+# Start the build:-
 
 ```bash
-# Go to the root of your build env...
-$ cd WORKSPACE
-# ...and run the builder tool.
-$ ./pb-build.sh DEVICE
+  . build/envsetup.sh
+  lunch superior_<devicecodename>-userdebug
+  mka bacon
 ```
 
-To learn about the advanced build options:
+---
 
-```bash
-$ ./pb-build.sh --help
-```
+# Some Links:-
 
-## Submitting Patches ##
-Your contributions are always valued! Please submit your patches to our [Gerrit](https://review.pixelbuilds.org).
+- [**Telegram Public Chat**](https://t.me/superioros)
+- [**Telegram Channel**](https://t.me/superior_os)
+- [**Crowdin**](https://crowdin.com/project/superior-os)
+
+---
+
+# Download Stats:-
+
+| Download Source | Total                                                                                                                                                |
+| --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| GitHub Releases | ![GitHub all releases](https://img.shields.io/github/downloads/SuperiorOS-Devices/official_devices/total?logo=GitHub&style=for-the-badge&color=blue) |
+
+| Download Source | Daily                                                                                                                              | Weekly                                                                                                                             | Monthly                                                                                                                            | Total                                                                                                                              |
+| --------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| SourceForge     | ![SourceForge](https://img.shields.io/sourceforge/dd/superioros?color=8827ed&logo=sourceforge&logoColor=black&style=for-the-badge) | ![SourceForge](https://img.shields.io/sourceforge/dw/superioros?color=6d1cf6&logo=sourceforge&logoColor=black&style=for-the-badge) | ![SourceForge](https://img.shields.io/sourceforge/dm/superioros?color=4b02a4&logo=sourceforge&logoColor=black&style=for-the-badge) | ![SourceForge](https://img.shields.io/sourceforge/dt/superioros?color=ff4d4d&logo=sourceforge&logoColor=black&style=for-the-badge) |
