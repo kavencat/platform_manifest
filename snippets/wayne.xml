@@ -2,9 +2,9 @@
 <manifest>
 
   <!-- wayne device -->
-  <project path="device/xiaomi/wayne" name="LineageOS-wayne/android_device_xiaomi_wayne" remote="github" revision="lineage-20.0" />
+  <project path="device/xiaomi/wayne" name="kavencat/android_device_xiaomi_wayne-4.19" remote="github" revision="unity" />
   <project path="kernel/xiaomi/wayne" name="kavencat/android_kernel_xiaomi_wayne-4.19" remote="github" revision="tequila" />
-  <project path="vendor/xiaomi/wayne" name="LineageOS-wayne/android_vendor_xiaomi_wayne" remote="github" revision="lineage-20.0" />
+  <project path="vendor/xiaomi/wayne" name="kavencat/android_vendor_xiaomi_wayne-4.19" remote="github" revision="tequila" />
 
   <project path="hardware/qcom-caf/sdm660/audio" name="kavencat/platform_hardware_qcom-caf_sdm660_audio" groups="qcom,qcom_audio,pdk-qcom" remote="github" revision="TDA" />
   <project path="hardware/qcom-caf/sdm660/display" name="kavencat/platform_hardware_qcom-caf_sdm660_display" groups="pdk-qcom,qcom,qcom_display" remote="github" revision="TDA" />
