@@ -2,7 +2,7 @@
 <manifest>
 
   <!-- wayne device -->
-  <project path="device/xiaomi/wayne" name="kavencat/android_device_xiaomi_wayne-4.19" remote="github" revision="unity" />
+  <project path="device/xiaomi/wayne" name="kavencat/android_device_xiaomi_wayne" remote="github" revision="lineage-20.0" />
   <project path="kernel/xiaomi/wayne" name="kavencat/android_kernel_xiaomi_wayne-4.19" remote="github" revision="tequila" />
   <project path="vendor/xiaomi/wayne" name="kavencat/android_vendor_xiaomi_wayne-4.19" remote="github" revision="tequila" />
 
