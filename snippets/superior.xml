@@ -45,14 +45,6 @@
   <project path="device/mediatek/sepolicy_vndr" name="android_device_mediatek_sepolicy_vndr" remote="superior" /> 
   <project path="device/qcom/sepolicy-legacy-um" name="android_device_qcom_sepolicy-legacy-um" remote="superior" />
 
-  <!-- External repos -->
-  <project path="external/gptfdisk" name="android_external_gptfdisk" remote="superior" />
-  <project path="external/libcxx" name="android_external_libcxx" remote="superior" />
-  <project path="external/mksh" name="android_external_mksh" remote="superior" />
-  <project path="external/tinyxml" name="android_external_tinyxml" remote="superior" />
-  <project path="external/wpa_supplicant_8" name="android_external_wpa_supplicant_8" remote="superior" />
-  <project path="external/mockito-kotlin" name="platform/external/mockito-kotlin" groups="pdk" remote="aosp" revision="refs/heads/main" />
-
   <!-- Framework repos -->
   <project path="frameworks/av" name="android_frameworks_av" remote="superior" />
   <project path="frameworks/base" name="android_frameworks_base" remote="superior" />
