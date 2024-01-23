@@ -25,7 +25,7 @@ To get started with the building process, you'll need to get familiar with [Git 
 # Sync Source:-
 
 ```bash
-    repo init -u https://github.com/kavencat/platform_manifest.git -b unity
+    repo init -u https://github.com/kavencat/platform_manifest.git -b fourteen --git-lfs
 ```
 
 ```bash
