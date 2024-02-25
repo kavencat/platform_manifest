@@ -12,5 +12,8 @@
   
   <!-- KernelSU -->
   <project path="kernel/KernelSU" name="tiann/KernelSU" remote="github" revision="main" />
+  
+  <!-- packages_apps_Recorder -->
+  <project path="packages/apps/Recorder" name="kavencat/android_packages_apps_Recorder" remote="github" revision="lineage-21.0" />
 
 </manifest>
