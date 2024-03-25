@@ -50,7 +50,7 @@
 
   <!-- Framework repos -->
   <project path="frameworks/av" name="android_frameworks_av" remote="superior" />
-  <project path="frameworks/base" name="android_frameworks_base" remote="superior" />
+  <project path="frameworks/base" name="android_frameworks_base" remote="superior" clone-depth="1" />
   <project path="frameworks/libs/systemui" name="android_frameworks_libs_systemui" remote="superior" />
   <project path="frameworks/native" name="android_frameworks_native" remote="superior" />
   <project path="frameworks/opt/telephony" name="android_frameworks_opt_telephony" remote="superior" />
@@ -113,7 +113,7 @@
   <project path="packages/apps/Launcher3" name="android_packages_apps_Launcher3" remote="superior" />
   <project path="packages/apps/Messaging" name="android_packages_apps_Messaging" remote="superior" />
   <project path="packages/apps/Nfc" name="android_packages_apps_Nfc" remote="superior" />
-  <project path="packages/apps/Settings" name="android_packages_apps_Settings" remote="superior" />
+  <project path="packages/apps/Settings" name="android_packages_apps_Settings" remote="superior" clone-depth="1" />
   <project path="packages/apps/SettingsIntelligence" name="android_packages_apps_SettingsIntelligence" remote="superior" />
   <project path="packages/apps/SuperiorLab" name="kavencat/android_packages_apps_SuperiorLab" remote="github" revision="fourteen" />
   <project path="packages/apps/ThemePicker" name="android_packages_apps_ThemePicker" remote="superior" />
