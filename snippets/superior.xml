@@ -132,7 +132,7 @@
   <!-- System repos -->
   <project path="system/bpf" name="android_system_bpf" remote="superior" />
   <project path="system/core" name="android_system_core" remote="superior" />
-  <project path="system/extras" name="android_system_extras" remote="superior" />
+  <project path="system/extras" name="android_system_extras" remote="superior" clone-depth="1" />
   <project path="system/libhidl" name="android_system_libhidl" remote="superior" />
   <project path="system/libhwbinder" name="android_system_libhwbinder" remote="superior" />
   <project path="system/tools/mkbootimg" name="android_system_tools_mkbootimg" remote="superior" />
